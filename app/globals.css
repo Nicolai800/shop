@@ -1,8 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+body {
+  color: var(--foreground);
+}
+* {
+  @apply font-urbanist;
+}
+
+.container {
+  @apply md:max-w-[1024px] max-w-[600px] px-4 md:px-2 m-auto;
+}
+.logo {
+  @apply font-urbanist font-black text-2xl;
+}
+.cart-icon {
+  @apply relative text-[25px];
+}
+
+.cart-item-qty {
+  @apply absolute top-0 right-[-5px] text-[12px] bg-red-500 w-[18px] h-[18px] rounded-full text-center text-white font-bold;
+}
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -14,14 +36,9 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
