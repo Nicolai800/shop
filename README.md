@@ -1,2 +1,2 @@
 # shop
-shop(Next,js Tailwind)
+shop(Next.js, Tailwind, Sanity, TypeScript)
