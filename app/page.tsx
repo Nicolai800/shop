@@ -4,7 +4,7 @@ import { Header } from "./components";
 
 export default async function Home() {
   const products = await client.fetch(groq`*[_type=="product"]`);
-  console.log(products);
+  // console.log(products);
 
   return (
     <>
