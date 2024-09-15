@@ -4,9 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   color: var(--foreground);
 }
+
 * {
   @apply font-urbanist;
 }
