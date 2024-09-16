@@ -1,6 +1,6 @@
-import Navbar from "./navbar";
-import Header from "./header";
-import Products from "./products";
+import Navbar from "./Navbar"
+import Header from "./Header";
+import Products from "./Products";
 
 export { Navbar };
 export { Header };
