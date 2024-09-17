@@ -4,7 +4,7 @@ import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
-import Card from "./Card";
+import Card from "./Card"
 
 const Products = async () => {
   const products = await client.fetch(groq`*[_type=="product"]`);

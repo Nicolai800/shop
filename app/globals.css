@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   color: var(--foreground);
 }
@@ -27,14 +26,45 @@ body {
   @apply absolute top-0 right-[-5px] text-[12px] bg-red-500 w-[18px] h-[18px] rounded-full text-center text-white font-bold;
 }
 
-
-.header-section{
-  @apply w-full md:h-[450px] h-[200px] flex items-center
+.header-section {
+  @apply w-full md:h-[450px] h-[200px] flex items-center;
 }
 
 .header-container {
-  @apply h-full  md:max-w-[1024px] max-w-[600px] flex justify-center items-center m-auto relative px-4 md:px-2
+  @apply h-full  md:max-w-[1024px] max-w-[600px] flex justify-center items-center m-auto relative px-4 md:px-2;
 }
+
+.current-product-details-container {
+  @apply gap-8 md:max-w-[1024px] m-auto max-w-[600px] px-4 md:px-0  grid md:grid-cols-2 grid-cols-1;
+}
+.quantity-desc{
+  @apply p-[6px] flex border border-black gap-5
+}
+.quantity-desc .minus{
+  color: red;
+}
+.quantity-desc .plus{
+  color: green;
+}
+.quantity-desc .num{
+  @apply text-[20px]
+}
+.btn{
+  @apply  text-black md:w-1/2 p-5 text-xl font-bold w-full border-4 border border-black;
+}
+
+.add-to-cart{
+  @apply hover:bg-black  hover:text-white;
+}
+
+
+
+
+
+
+
+
+
 
 
 

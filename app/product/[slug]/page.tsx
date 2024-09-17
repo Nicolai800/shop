@@ -1,11 +1,18 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { ProductDetails } from "@/app/components";
+import { useParams } from "next/navigation";
+import { groq } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-const page = () => {
-  return (
-    <div className='container'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis natus possimus praesentium dicta eveniet odit molestiae hic harum quod eaque officiis quo consectetur accusantium inventore, maiores minima. Temporibus, voluptate sint?
-    </div>
-  )
-}
+const page = async () => {
+  const { slug } = useParams();
+  const products = await client.fetch(groq`*[_type=="product"]`);
+  const currentProduct = products.find(
+    (currentProduct: any) => currentProduct.slug.current == slug
+  );
 
-export default page
+  return <ProductDetails currentProduct={currentProduct} />;
+};
+
+export default page;

@@ -1,7 +1,8 @@
 import Navbar from "./Navbar"
 import Header from "./Header";
 import Products from "./Products";
+import Card from "./Card";
+import ProductDetails from "./ProductDetails";
 
-export { Navbar };
-export { Header };
-export { Products };
+
+export { Navbar, Header, Products, Card, ProductDetails };
