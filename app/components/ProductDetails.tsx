@@ -1,11 +1,16 @@
 "use client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { CartContext } from "../context/CartContext";
+import { product } from "@/sanity/schemas/product-schema";
 
 const ProductDetails = ({ currentProduct }: any) => {
   const [index, setIndex] = useState(0);
+  const { cartItems, addProduct, qty, minusQty, plusQty }: any =
+    useContext(CartContext);
+  console.log(cartItems);
 
   return (
     <div className="w-full md:py-16">
@@ -37,7 +42,7 @@ const ProductDetails = ({ currentProduct }: any) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 md:pt-32 pt-0">
           <div className="flex flex-col gap-4">
             <div className="text-3xl font-bold">{currentProduct.name}</div>
             <div className="text-xl font-medium">{currentProduct.price} zl</div>
@@ -45,16 +50,19 @@ const ProductDetails = ({ currentProduct }: any) => {
           <div className="flex gap-2 items-center">
             <h3>Quantity</h3>
             <p className="quantity-desc flex items-center">
-              <span className="minus">
+              <span className="minus" onClick={minusQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="num">1</span>
-              <span className="plus">
+              <span className="num">{qty}</span>
+              <span className="plus" onClick={plusQty}>
                 <AiOutlinePlus />
               </span>
             </p>
           </div>
-          <button className="btn add-to-cart">
+          <button
+            className="btn add-to-cart"
+            onClick={() => addProduct(product, qty)}
+          >
             Add to cart
           </button>
         </div>

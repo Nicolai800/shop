@@ -50,13 +50,32 @@ body {
   @apply text-[20px]
 }
 .btn{
-  @apply  text-black md:w-1/2 p-5 text-xl font-bold w-full border-4 border border-black;
+  @apply  text-black md:w-1/2 p-5 text-xl font-bold w-full border-4  border-black;
 }
 
 .add-to-cart{
   @apply hover:bg-black  hover:text-white;
 }
 
+.cart-wrapper{
+  @apply w-[100vw] bg-black bg-opacity-50  fixed right-0 top-0 z-10;
+}
+
+.cart-container{
+  @apply border h-[100vh]  w-[600px] bg-white  float-right px-[40px] py-[50px] relative;
+}
+.cart-heading{
+  @apply  flex items-center text-[18px] font-[500] cursor-pointer gap-[2px] ml-[10px] border-none bg-[transparent];
+}
+
+.cart-heading .heading{
+  margin-left: 10px;
+}
+
+.cart-num-items{
+  margin-left: 10px;
+  color: #f02d34;
+}
 
 
 
