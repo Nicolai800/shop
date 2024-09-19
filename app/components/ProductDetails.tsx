@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useState, useContext } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { CartContext } from "../context/CartContext";
-import { product } from "@/sanity/schemas/product-schema";
 
 const ProductDetails = ({ currentProduct }: any) => {
   const [index, setIndex] = useState(0);
@@ -37,6 +36,7 @@ const ProductDetails = ({ currentProduct }: any) => {
                 height={100}
                 className="object-cover mx-auto h-32 border rounded-xl hover:cursor-pointer"
                 onClick={() => setIndex(imgIndex)}
+                key={imgIndex}
               />
             ))}
           </div>
@@ -61,7 +61,7 @@ const ProductDetails = ({ currentProduct }: any) => {
           </div>
           <button
             className="btn add-to-cart"
-            onClick={() => addProduct(product, qty)}
+            onClick={() => addProduct(currentProduct, qty)}
           >
             Add to cart
           </button>

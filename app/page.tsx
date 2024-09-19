@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import { Header, Products } from "./components";
 
-export default async function Home() {
+export default function Home() {
   
   return (
     <>
