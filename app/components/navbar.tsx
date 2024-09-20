@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-[80px] bg-white border-b">
+      <div className="bg-white rounded-lg shadow dark:bg-gray-200 m-4 h-[70px]">
         <div className="container w-full h-full flex justify-between items-center">
           <Link href="/" className="logo">
             Art Kiss

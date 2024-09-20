@@ -24,14 +24,14 @@ const Cart = () => {
                 loader={() => urlFor(currentProduct.images[0]).url()}
                 src={urlFor(currentProduct.images[0]).url()}
                 alt={currentProduct.images[0]}
-                width={350}
-                height={350}
+                width={250}
+                height={250}
                 className="object-cover mx-auto"
               />
-              <div className="item-description">
-                <div className="flex top">
+              <div className="item-desc">
+                <div className="flex top flex-col">
                   <h5>{currentProduct.name}</h5>
-                  <h4>{currentProduct.price}</h4>
+                  <h4>{currentProduct.price} zl</h4>
                 </div>
                 <div className="flex bottom">
                   <div className="quantity-desc"
