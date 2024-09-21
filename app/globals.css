@@ -104,7 +104,7 @@ body {
 }
 
 .item-desc .flex {
-  display: flex;
+  display: flex-colmn;
   justify-content: space-between;
   color: #324d67;
 }

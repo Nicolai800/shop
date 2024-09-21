@@ -12,7 +12,7 @@ const Products = async () => {
   // console.log(products);
 
   return (
-    <div className="bg-[#f8f8f8] w-full py-12 mt-32">
+    <div className="w-full py-12 mt-32">
       <div className="container">
         <div className="py-4">
           <h2 className="text-3xl font-bold">Best Selling</h2>

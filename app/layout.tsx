@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
+      <body className="bg-gradient-to-tl from-amber-900 to-amber-500">
         <CartProvider>
           <Navbar />
           <div>{children}</div>

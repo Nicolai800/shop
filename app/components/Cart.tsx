@@ -3,6 +3,7 @@ import { AiOutlineLeft, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { CartContext } from "../context/CartContext";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import { TiDeleteOutline } from "react-icons/ti";
 
 const Cart = () => {
   const { cartItems, showCart, setShowCart }: any = useContext(CartContext);
@@ -24,9 +25,9 @@ const Cart = () => {
                 loader={() => urlFor(currentProduct.images[0]).url()}
                 src={urlFor(currentProduct.images[0]).url()}
                 alt={currentProduct.images[0]}
-                width={250}
-                height={250}
-                className="object-cover mx-auto"
+                width={200}
+                height={200}
+                className="object-cover"
               />
               <div className="item-desc">
                 <div className="flex top flex-col">
@@ -39,7 +40,7 @@ const Cart = () => {
                     <span className="minus">
                       <AiOutlineMinus/>
                     </span>
-                    <span className="minus">
+                    <span className="num">
                       {currentProduct.quantity}
                     </span>
                     <span className="plus">
@@ -47,6 +48,9 @@ const Cart = () => {
                     </span>
                   </div>
                 </div>
+                <button type="button" className="remove-itm">
+                  <TiDeleteOutline/>
+                </button>
               </div>
             </div>
           ))}

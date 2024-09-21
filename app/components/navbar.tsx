@@ -13,9 +13,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-white rounded-lg shadow dark:bg-gray-200 m-4 h-[70px]">
+      <div className="bg-white rounded-lg shadow dark:bg-gray-300 m-4 h-[70px]">
         <div className="container w-full h-full flex justify-between items-center">
-          <Link href="/" className="logo">
+          <Link href="/" className="logo text-gray-900">
             Art Kiss
           </Link>
           <button className="cart-icon" onClick={handleClick}>

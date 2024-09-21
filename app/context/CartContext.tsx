@@ -15,12 +15,34 @@ export const CartProvider = ({ children }: any) => {
     setQty((prevQty: number) => (prevQty - 1 < 1 ? 1 : prevQty - 1));
   };
 
-  const addProduct = (product:any, quantity:number) =>{
-    setCartItems([...cartItems, {...product}])
-  }
+  const addProduct = (product: any, quantity: number) => {
+    const checkProductInCart = cartItems.find(
+      (item: any) => item._id === product._id
+    );
+
+    if (checkProductInCart) {
+      const updatedCartItems = cartItems.map((cartProduct: any) => {
+        if (cartProduct._id === product._id) {
+          return { ...cartProduct, quantity: cartProduct.quantity + quantity };
+        }
+      });
+      setCartItems(updatedCartItems);
+    } else {
+      product.quantity = quantity;
+      setCartItems([...cartItems, { ...product }]);
+    }
+  };
   return (
     <CartContext.Provider
-      value={{ showCart, setShowCart, qty, plusQty, minusQty, cartItems, addProduct }}
+      value={{
+        showCart,
+        setShowCart,
+        qty,
+        plusQty,
+        minusQty,
+        cartItems,
+        addProduct,
+      }}
     >
       <div>{children}</div>
     </CartContext.Provider>
