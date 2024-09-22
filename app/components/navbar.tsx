@@ -6,7 +6,7 @@ import Cart from "./Cart";
 import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
-  const { showCart, setShowCart }: any = useContext(CartContext);
+  const { showCart, setShowCart, totalQuantity }: any = useContext(CartContext);
   const handleClick = () => {
     setShowCart(!showCart);
   };
@@ -20,7 +20,7 @@ const Navbar = () => {
           </Link>
           <button className="cart-icon" onClick={handleClick}>
             <FiShoppingBag />
-            <span className="cart-item-qty">0</span>
+            <span className="cart-item-qty">{totalQuantity}</span>
           </button>
         </div>
       </div>
