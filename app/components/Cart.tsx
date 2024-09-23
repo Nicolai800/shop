@@ -13,6 +13,7 @@ const Cart = () => {
     totalQuantity,
     totalPrice,
     toggleCartItemQty,
+    onRemove,
   }: any = useContext(CartContext);
   const handleClose = () => {
     setShowCart(!showCart);
@@ -38,18 +39,23 @@ const Cart = () => {
               />
               <div className="item-desc">
                 <div className="flex top flex-col">
-                  <h5>{currentProduct.name}</h5>
-                  <button type="button" className="remove-itm">
+                  <button
+                    type="button"
+                    className="remove-itm"
+                    onClick={() => onRemove(currentProduct)}
+                  >
                     <TiDeleteOutline />
                   </button>
+                  <h5>{currentProduct.name}</h5>
                   <h4>{currentProduct.price} zl</h4>
                 </div>
                 <div className="flex bottom">
                   <div className="quantity-desc">
-                    <span className="minus"
-                    onClick={() =>
-                      toggleCartItemQty(currentProduct._id, "minus")
-                    }
+                    <span
+                      className="minus"
+                      onClick={() =>
+                        toggleCartItemQty(currentProduct._id, "minus")
+                      }
                     >
                       <AiOutlineMinus />
                     </span>

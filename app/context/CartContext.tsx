@@ -41,21 +41,36 @@ export const CartProvider = ({ children }: any) => {
     }
   };
 
+  const onRemove = (product: any)=>{
+    let foundProduct = cartItems.find((item)=> item._id === product._id)
+    const newCartItems = cartItems.filter((item)=> item._id !== product._id);
+    setCartItems(newCartItems);
+    setTotalPrice((prevTotal)=> prevTotal - foundProduct.price*foundProduct.quantity);
+    setTotalQuantity((ptevTotalQty)=> ptevTotalQty - foundProduct.quantity);
+
+  }
+
   const toggleCartItemQty = (id: any, value: any) => {
     let foundProduct = cartItems.find((item) => item._id === id);
-    const otherProduct = cartItems.filter((items) => items._id !== id);
+    // const otherProduct = cartItems.filter((items) => items._id !== id);
+    const index = cartItems.findIndex((product) => product._id === id);
+    const updatedCartItems = [...cartItems];
     if (value === "plus") {
-      setCartItems([
-        ...otherProduct,
-        { ...foundProduct, quantity: foundProduct.quantity + 1 },
-      ]);
-      setTotalPrice((prevTotalPrice)=> prevTotalPrice + foundProduct.price)
+      updatedCartItems[index] = {
+        ...updatedCartItems[index],
+        quantity: updatedCartItems[index].quantity + 1,
+      };
+      setCartItems([...updatedCartItems]);
+      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+      setTotalQuantity((prevTotalQuanttity) => prevTotalQuanttity + 1);
     } else if (value === "minus" && foundProduct.quantity > 1) {
-      setCartItems([
-        ...otherProduct,
-        { ...foundProduct, quantity: foundProduct.quantity - 1 },
-      ]);
-      setTotalPrice((prevTotalPrice)=> prevTotalPrice - foundProduct.price)
+      updatedCartItems[index] = {
+        ...updatedCartItems[index],
+        quantity: updatedCartItems[index].quantity - 1,
+      };
+      setCartItems([...updatedCartItems]);
+      setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+      setTotalQuantity((prevTotalQuanttity) => prevTotalQuanttity - 1);
     }
   };
   return (
@@ -71,6 +86,7 @@ export const CartProvider = ({ children }: any) => {
         totalQuantity,
         totalPrice,
         toggleCartItemQty,
+        onRemove
       }}
     >
       <div>{children}</div>
