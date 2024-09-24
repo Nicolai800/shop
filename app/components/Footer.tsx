@@ -23,8 +23,8 @@ const Footer = () => {
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-lg font-medium text-gray-500 sm:mb-0 dark:text-gray-900">
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                About
+              <a href="/about" className="hover:underline me-4 md:me-6">
+                About Us
               </a>
             </li>
             {/* <li>
@@ -32,6 +32,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </li> */}
+            <p><a href="mailto:happy454420@gmail.com?subject=Ask" target="_blank" className="hover:underline me-4 md:me-6">gmail</a></p>
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
                 Licensing
