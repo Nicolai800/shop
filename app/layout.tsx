@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer, CookiesConsent} from "./components";
 import { CartProvider } from "./context/CartContext";
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export default function RootLayout({
         <CartProvider>
           <Navbar />
           <div>{children}</div>
+          <CookiesConsent/>
           <Footer />
         </CartProvider>
       </body>
