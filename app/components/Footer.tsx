@@ -32,7 +32,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </li> */}
-            <p><a href="mailto:happy454420@gmail.com?subject=Ask" target="_blank" className="hover:underline me-4 md:me-6">gmail</a></p>
+            <p><a href="mailto:artkissdesign@gmail.com?subject=Ask" target="_blank" className="hover:underline me-4 md:me-6">gmail</a></p>
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
                 Licensing
