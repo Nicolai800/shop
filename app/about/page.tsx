@@ -1,4 +1,5 @@
 import React from "react";
+import { Slider } from "../components";
 
 export default function About() {
   return (
@@ -9,6 +10,7 @@ export default function About() {
         laboriosam eum nisi quos accusantium in aut, quo, ab repellendus tempora
         facere, dolorem et. Accusamus vitae fugit iusto qui similique officiis?
       </p>
+      <Slider/>
     </div>
   );
 }

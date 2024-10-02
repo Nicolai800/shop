@@ -42,7 +42,7 @@ function Navbar() {
           </button>
         </div>
         {/* Логотип */}
-        <div className="text-white text-xl font-bold">Art Kiss</div>
+        <Link href="/"className="text-white text-xl font-bold">Art Kiss</Link>
 
         {/* Навигационные ссылки для десктопа */}
         <div className="hidden md:flex space-x-4 text-white">
