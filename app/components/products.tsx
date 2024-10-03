@@ -10,7 +10,7 @@ import Card from "./Card"
 const Products = async () => {
   
   const products = await client.fetch(groq`*[_type=="product"]`,);
-  console.log(products);
+  // console.log(products);
 
   return (
     <div className="w-full py-12 mt-32">
