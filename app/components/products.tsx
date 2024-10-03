@@ -6,10 +6,11 @@ import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 import Card from "./Card"
 
+
 const Products = async () => {
   
-  const products = await client.fetch(groq`*[_type=="product"]`);
-  // console.log(products);
+  const products = await client.fetch(groq`*[_type=="product"]`,);
+  console.log(products);
 
   return (
     <div className="w-full py-12 mt-32">

@@ -9,7 +9,7 @@ const ProductDetails = ({ currentProduct }: any) => {
   const [index, setIndex] = useState(0);
   const { cartItems, addProduct, qty, minusQty, plusQty }: any =
     useContext(CartContext);
-  console.log(cartItems);
+  // console.log(currentProduct);
 
   return (
     <div className="w-full md:py-16">
@@ -42,10 +42,12 @@ const ProductDetails = ({ currentProduct }: any) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8 md:pt-32 pt-0">
+        <div className="flex flex-col gap-8 md:pt-30 pt-0">
           <div className="flex flex-col gap-4">
+            <div className="text-3xl font-semibold">{currentProduct.category}</div>
             <div className="text-3xl font-bold">{currentProduct.name}</div>
-            <div className="text-xl font-medium">{currentProduct.price} zl</div>
+            <div className="text-xl font-medium">{currentProduct.price} zl <span className="text-base line-through">{currentProduct.oldPrice}</span></div> 
+            <div className="text-xl font-medium">{currentProduct.description}</div>
           </div>
           <div className="flex gap-2 items-center">
             <h3>Quantity</h3>

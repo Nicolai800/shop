@@ -180,6 +180,16 @@ body {
 .checkout-btn:hover {
   @apply text-white p-5 text-xl font-bold w-full bg-black;
 }
+.fields{
+  @apply w-full h-12 bg-transparent border-2 border-solid border-gray-500 p-4 rounded-md outline-none mt-2 text-base text-gray-800
+}
+.fields2{
+  @apply w-full bg-transparent border-2 border-solid border-gray-500 p-4 rounded-md outline-none mt-2 text-base text-gray-800 h-[200px] resize-none
+}
+
+.alert-button{
+  @apply bg-gray-700
+}
 
 /* :root {
   --background: #ffffff;
