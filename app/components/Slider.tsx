@@ -17,7 +17,7 @@ const Slider = () => {
     firstSliderImg,
     secondSliderImg,
     thirdSliderImg,
-    fourthdSliderImg
+    fourthdSliderImg,
   ];
 
   let [current, setCurrent] = useState<number>(0);
@@ -27,6 +27,13 @@ const Slider = () => {
   const nextSlide = () => {
     current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
   };
+  const intervalSlider = () => {
+    setInterval(()=>{
+      current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
+    },5000)
+    
+  };
+  intervalSlider();
   return (
     <div className="w-full m-auto pt-11">
       <div className="overflow-hidden relative rounded-xl mx-[5%] md:mx-[17%]">
@@ -46,9 +53,9 @@ const Slider = () => {
             );
           })}
         </div>
-        <div className="absolute top-0 h-full w-full justify-between items-center flex px-[5%] text-white text-2xl  ">
+        <div className="absolute top-0 h-full w-full justify-between items-center flex px-[5%] text-white text-2xl">
           <button>
-            <BsFillArrowLeftCircleFill onClick={previosSlide}/>
+            <BsFillArrowLeftCircleFill onClick={previosSlide} />
           </button>
           <button>
             <BsFillArrowRightCircleFill onClick={nextSlide} />
@@ -58,9 +65,9 @@ const Slider = () => {
           {sliders.map((el: any, index: number) => {
             return (
               <div
-                className={`rounded-full border border-gray-400 w-3 h-3 cursor-pointer ${index == current ?  "bg-white": "bg-gray-300"}`}
+                className={`rounded-full border border-gray-400 w-3 h-3 cursor-pointer ${index == current ? "bg-white" : "bg-gray-300"}`}
                 key={index}
-                onClick={()=>setCurrent(index)}
+                onClick={() => setCurrent(index)}
               ></div>
             );
           })}
