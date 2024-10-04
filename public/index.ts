@@ -7,4 +7,4 @@ import thirdSliderImg from "./third.jpeg"
 import fourthdSliderImg from "./fourth.jpeg"
 import fithtSliderImg from "./fifth.jpeg"
 
-export {headerImg, secondHeaderImg, artKissLogo, firstSliderImg, secondSliderImg, thirdSliderImg, fourthdSliderImg, fithtSliderImg}
+export {headerImg, secondHeaderImg, artKissLogo, firstSliderImg, secondSliderImg, thirdSliderImg, fourthdSliderImg}
