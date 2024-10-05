@@ -8,16 +8,16 @@ import { CartContext } from "../context/CartContext";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { showCart, setShowCart, totalQuantity }: any = useContext(CartContext);
-  const handleClick = () => {
-    setShowCart(!showCart);
-  };
+  // const handleClick = () => {
+  //   setShowCart(!showCart);
+  // };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-slate-400 rounded-lg shadow m-4 py-4">
+    <nav className="bg-slate-400 rounded-lg shadow  mt-[1%] mx-[5%] py-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Гамбургер-меню для мобильных устройств */}
         <div className="md:hidden">
@@ -42,46 +42,46 @@ function Navbar() {
           </button>
         </div>
         {/* Логотип */}
-        <Link href="/"className="text-white text-xl font-bold">Art Kiss</Link>
+        <Link href="/" className="text-white text-xl font-bold">
+          Art Kiss
+        </Link>
 
         {/* Навигационные ссылки для десктопа */}
         <div className="hidden md:flex space-x-4 text-white">
           <Link href="/" className="hover:text-gray-300">
-            Home
+            Strona główna
           </Link>
           <Link href="/about" className="hover:text-gray-300">
-            About
+            O nas
           </Link>
-          <Link href="/" className="hover:text-gray-300">
-            Services
+          <Link href="/product_categories" className="hover:text-gray-300">
+            Kategorie
           </Link>
           <Link href="/contacts" className="hover:text-gray-300">
-            Contacts
+            Kontakty
           </Link>
         </div>
-        <button className="cart-icon" onClick={handleClick}>
-          <FiShoppingBag />
-          <span className="cart-item-qty">{totalQuantity}</span>
-        </button>
+        <Link href="/cart">
+          <button className="cart-icon">
+            <FiShoppingBag />
+            <span className="cart-item-qty">{totalQuantity}</span>
+          </button>
+        </Link>
       </div>
 
       {/* Меню для мобильных устройств */}
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } md:hidden text-white`}
-      >
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden text-white`}>
         <a href="/" className="block px-4 py-2 hover:bg-slate-600">
-          Home
+          Strona główna
         </a>
         <a href="/about" className="block px-4 py-2 hover:bg-slate-600">
-          About
+          O nas
+        </a>
+        <a href="/product_categories" className="block px-4 py-2 hover:bg-slate-600">
+          Kategorie
         </a>
         <a href="/" className="block px-4 py-2 hover:bg-slate-600">
-          Services
-        </a>
-        <a href="/" className="block px-4 py-2 hover:bg-slate-600">
-          Contact
+          Kontakty
         </a>
       </div>
     </nav>

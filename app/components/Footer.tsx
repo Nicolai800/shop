@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-300 m-4">
+    <footer className="bg-white rounded-lg shadow dark:bg-gray-300 m-[5%]">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
@@ -13,10 +13,10 @@ const Footer = () => {
           >
             <Image
               src={artKissLogo}
-              height={150}
-              width={150}
+              // height={150}
+              // width={150}
               alt="ArtKiss Logo"
-              className="w-auto h-auto"
+              className="w-[45%] h-[40%]"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-900">
               Art Kiss
@@ -25,7 +25,7 @@ const Footer = () => {
           <ul className="flex flex-wrap items-center mb-6 text-lg font-medium text-gray-500 sm:mb-0 dark:text-gray-900">
             <li>
               <a href="/about" className="hover:underline me-4 md:me-6">
-                About Us
+                O nas
               </a>
             </li>
             {/* <li>
@@ -33,15 +33,15 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </li> */}
-            <p><a href="mailto:artkissdesign@gmail.com?subject=Ask" target="_blank" className="hover:underline me-4 md:me-6">gmail</a></p>
+            <p><a href="mailto:artkissdesign@gmail.com?subject=Ask" target="_blank" className="hover:underline me-4 md:me-6">artkissdesign@gmail.com</a></p>
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
-                Licensing
+              Polityka prywatności
               </a>
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Contact
+              Kontakty
               </a>
             </li>
           </ul>

@@ -13,10 +13,10 @@ const Products = async () => {
   // console.log(products);
 
   return (
-    <div className="w-full py-12 mt-32">
+    <div className="w-full py-12">
       <div className="container">
         <div className="py-4">
-          <h2 className="text-3xl font-bold">Best Selling</h2>
+          <h2 className="text-3xl font-bold">Oferty</h2>
         </div>
         <div className="grid grid-colos-1  sm:grid-cols-2 md:grid-cols-4 mt-6 gap-3">
           {products.map((product: any, index: number) => (

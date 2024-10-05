@@ -52,10 +52,10 @@ const Slider = () => {
     };
   }, []);
   return (
-    <div className="w-full m-auto pt-5 md:pt-11">
-      <div className="overflow-hidden relative rounded-xl mx-[5%] md:mx-[17%]">
+    <div className="w-full m-auto">
+      <div className="overflow-hidden relative rounded-xl m-[5%] md:mx-[25%]">
         <div
-          className="flex transition-transform ease-in-out duration-700 w-full"
+          className="flex transition-transform ease-in-out duration-700"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {sliders.map((el: any, index: number) => {
@@ -63,10 +63,10 @@ const Slider = () => {
               <Image
                 src={el}
                 alt="Slider Image"
-                width={600}
-                height={300}
+                // width={1000}
+                // height={800}
                 key={index}
-                // className="w-auto h-auto"
+                className="object-fill"
               />
             );
           })}

@@ -3,7 +3,7 @@ import { ContactForm } from "../components";
 
 export default function Contacts() {
   return (
-    <div className="p-4">
+    <div className="p-[5%]">
       <h2>Contacts</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
