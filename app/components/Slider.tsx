@@ -55,7 +55,7 @@ const Slider = () => {
     <div className="w-full m-auto pt-5 md:pt-11">
       <div className="overflow-hidden relative rounded-xl mx-[5%] md:mx-[17%]">
         <div
-          className="flex transition-transform ease-in-out duration-700"
+          className="flex transition-transform ease-in-out duration-700 w-full"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {sliders.map((el: any, index: number) => {
@@ -63,10 +63,10 @@ const Slider = () => {
               <Image
                 src={el}
                 alt="Slider Image"
-                width={1280}
-                height={960}
+                width={600}
+                height={300}
                 key={index}
-                className="w-auto h-auto"
+                // className="w-auto h-auto"
               />
             );
           })}

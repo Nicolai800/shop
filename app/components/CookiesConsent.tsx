@@ -63,9 +63,9 @@ export default function CookiesConsent() {
   }
 
   return (
-    <div className="fixed inset-0 bg-slate-700 bg-opacity-70 z-50">
-      <div className="fixed bottom-0  flex flex-col items-center justify-between px-4 py-8 bg-gray-500 text-white md:flex-row md:items-center">
-        <span className="text-dark text-base mr-0 mb -4 md:mr-16  md:mb-0">
+    // <div className="fixed inset-0 bg-slate-700 bg-opacity-70 z-50">
+      <div className="fixed  w-full bottom-0  flex flex-col items-center justify-between px-4 py-8 bg-gray-500 text-white md:flex-row md:items-center">
+        <span className="text-dark text-base mr-0 mb-4 md:mr-16  md:mb-0">
         Ta strona korzysta z plików cookie, aby poprawić Twoje doświadczenia użytkownika, analizować ruch oraz personalizować treści. Kontynuując korzystanie z witryny, zgadzasz się na naszą{" "}
           <Link href="/about" className="font-bold text-red-400">
           Politykę plików cookie.
@@ -78,6 +78,6 @@ export default function CookiesConsent() {
           Akceptuj
         </button>
       </div>
-    </div>
+    // </div>
   );
 }
