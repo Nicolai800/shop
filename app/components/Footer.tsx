@@ -16,6 +16,7 @@ const Footer = () => {
               height={150}
               width={150}
               alt="ArtKiss Logo"
+              className="w-auto h-auto"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-900">
               Art Kiss

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   firstSliderImg,
   secondSliderImg,
@@ -13,7 +13,7 @@ import {
 } from "react-icons/bs";
 
 const Slider = () => {
-  let sliders = [
+  const sliders = [
     firstSliderImg,
     secondSliderImg,
     thirdSliderImg,
@@ -21,24 +21,41 @@ const Slider = () => {
   ];
 
   let [current, setCurrent] = useState<number>(0);
-  const previosSlide = () => {
-    current === 0 ? setCurrent(sliders.length - 1) : setCurrent(current - 1);
+  // const previosSlide = () => {
+  //   current === 0 ? setCurrent(sliders.length - 1) : setCurrent(current - 1);
+  // };
+  // const nextSlide = () => {
+  //   current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
+  // };
+  // const intervalSlider = () => {
+  //   setInterval(()=>{
+  //     current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
+  //   },5000)
+
+  // };
+  // intervalSlider();
+
+  const previousSlide = () => {
+    setCurrent((prev) => (prev === 0 ? sliders.length - 1 : prev - 1));
   };
+
   const nextSlide = () => {
-    current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
+    setCurrent((prev) => (prev === sliders.length - 1 ? 0 : prev + 1));
   };
-  const intervalSlider = () => {
-    setInterval(()=>{
-      current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
-    },5000)
-    
-  };
-  intervalSlider();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === sliders.length - 1 ? 0 : prev + 1));
+    }, 7000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return (
-    <div className="w-full m-auto pt-11">
+    <div className="w-full m-auto pt-5 md:pt-11">
       <div className="overflow-hidden relative rounded-xl mx-[5%] md:mx-[17%]">
         <div
-          className="flex transition ease-out duration-40"
+          className="flex transition-transform ease-in-out duration-700"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {sliders.map((el: any, index: number) => {
@@ -49,13 +66,14 @@ const Slider = () => {
                 width={1280}
                 height={960}
                 key={index}
+                className="w-auto h-auto"
               />
             );
           })}
         </div>
         <div className="absolute top-0 h-full w-full justify-between items-center flex px-[5%] text-white text-2xl">
           <button>
-            <BsFillArrowLeftCircleFill onClick={previosSlide} />
+            <BsFillArrowLeftCircleFill onClick={previousSlide} />
           </button>
           <button>
             <BsFillArrowRightCircleFill onClick={nextSlide} />

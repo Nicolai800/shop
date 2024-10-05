@@ -23,6 +23,7 @@ const ProductDetails = ({ currentProduct }: any) => {
               width={350}
               height={350}
               className="object-cover mx-auto"
+              unoptimized
             />
           </div>
 
@@ -37,6 +38,7 @@ const ProductDetails = ({ currentProduct }: any) => {
                 className="object-cover mx-auto h-32 border rounded-xl hover:cursor-pointer"
                 onClick={() => setIndex(imgIndex)}
                 key={imgIndex}
+                unoptimized
               />
             ))}
           </div>
