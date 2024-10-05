@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import {
-  firstSliderImg,
-  secondSliderImg,
-  thirdSliderImg,
-  fourthdSliderImg,
+  firstSliderImage,
+  secondSliderImage,
+  thirdSliderImage,
+  fourthSliderImage,
 } from "@/public";
 import Image from "next/image";
 import {
@@ -14,10 +14,10 @@ import {
 
 const Slider = () => {
   const sliders = [
-    firstSliderImg,
-    secondSliderImg,
-    thirdSliderImg,
-    fourthdSliderImg,
+    firstSliderImage,
+    secondSliderImage,
+    thirdSliderImage,
+    fourthSliderImage,
   ];
 
   let [current, setCurrent] = useState<number>(0);

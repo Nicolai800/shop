@@ -44,7 +44,7 @@ const ProductDetails = ({ currentProduct }: any) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8 md:pt-32 pt-0">
+        <div className="flex flex-col gap-8 md:pt-30 pt-0">
           <div className="flex flex-col gap-4">
             <div className="text-3xl font-medium">{currentProduct.category}</div>
             <div className="text-2xl font-bold">{currentProduct.name}</div>
