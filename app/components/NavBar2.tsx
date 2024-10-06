@@ -4,6 +4,8 @@ import React, { useState, useContext } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import Cart from "./Cart";
 import { CartContext } from "../context/CartContext";
+import Image from "next/image";
+import { facebookLogo, instagramLogo } from "@/public";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,18 +73,43 @@ function Navbar() {
 
       {/* Меню для мобильных устройств */}
       <div className={`${isOpen ? "block" : "hidden"} md:hidden text-white`}>
-        <a href="/" className="block px-4 py-2 hover:bg-slate-600">
+        <Link href="/" className="block px-4 py-2 hover:bg-slate-600">
           Strona główna
-        </a>
-        <a href="/about" className="block px-4 py-2 hover:bg-slate-600">
+        </Link>
+        <Link href="/about" className="block px-4 py-2 hover:bg-slate-600">
           O nas
-        </a>
-        <a href="/product_categories" className="block px-4 py-2 hover:bg-slate-600">
+        </Link>
+        <Link
+          href="/product_categories"
+          className="block px-4 py-2 hover:bg-slate-600"
+        >
           Kategorie
-        </a>
-        <a href="/" className="block px-4 py-2 hover:bg-slate-600">
+        </Link>
+        <Link href="/contacts" className="block px-4 py-2 hover:bg-slate-600">
           Kontakty
-        </a>
+        </Link>
+        <div className="flex justify-end pr-[3%]">
+          <a
+            href="https://www.facebook.com/p/Art-Kiss-Design-100066490130748/?_rdr"
+            target="_blank"
+          >
+            <Image
+              src={facebookLogo}
+              alt="facebookLogo"
+              className="w-12 h-12"
+            ></Image>
+          </a>
+          <a
+            href="https://www.instagram.com/_art_kiss_design/"
+            target="_blank"
+          >
+            <Image
+              src={instagramLogo}
+              alt="instagramLogo"
+              className="w-12 h-12"
+            ></Image>
+          </a>
+        </div>
       </div>
     </nav>
   );

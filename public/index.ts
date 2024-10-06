@@ -5,5 +5,6 @@ import firstSliderImage from "./FirstSliderImage.jpeg"
 import secondSliderImage from "./SecondSliderImage.jpeg"
 import thirdSliderImage from "./thirdSliderImage.jpeg"
 import fourthSliderImage from "./fourthSliderImage.jpeg"
-
-export { headerImg, secondHeaderImg, artKissLogo, firstSliderImage, secondSliderImage, thirdSliderImage, fourthSliderImage }
+import facebookLogo from "./logo/facebookLogo.svg"
+import instagramLogo from "./logo/instagramLogo.svg"
+export { headerImg, secondHeaderImg, artKissLogo, firstSliderImage, secondSliderImage, thirdSliderImage, fourthSliderImage, facebookLogo, instagramLogo }
