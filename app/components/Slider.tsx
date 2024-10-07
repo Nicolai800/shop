@@ -21,20 +21,7 @@ const Slider = () => {
   ];
 
   let [current, setCurrent] = useState<number>(0);
-  // const previosSlide = () => {
-  //   current === 0 ? setCurrent(sliders.length - 1) : setCurrent(current - 1);
-  // };
-  // const nextSlide = () => {
-  //   current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
-  // };
-  // const intervalSlider = () => {
-  //   setInterval(()=>{
-  //     current === sliders.length - 1 ? setCurrent(0) : setCurrent(current + 1);
-  //   },5000)
-
-  // };
-  // intervalSlider();
-
+  
   const previousSlide = () => {
     setCurrent((prev) => (prev === 0 ? sliders.length - 1 : prev - 1));
   };

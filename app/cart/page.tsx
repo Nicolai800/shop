@@ -28,7 +28,7 @@ export default function Cart() {
         )}
       </div>
 
-      <div className="product-container">
+      <div className="product-container bg-gray-400 rounded-xl">
         {cartItems.map((currentProduct: any) => (
           <div className="product" key={currentProduct._id}>
             <Image
@@ -37,10 +37,10 @@ export default function Cart() {
               alt={currentProduct.images[0]}
               width={200}
               height={200}
-              className="object-cover"
+              className="object-cover rounded-xl"
             />
             <div className="item-desc">
-              <div className="flex top flex-col">
+              <div className="flex top flex-col border">
                 <button
                   type="button"
                   className="remove-itm"
@@ -54,7 +54,7 @@ export default function Cart() {
               <div className="flex bottom">
                 <div className="quantity-desc">
                   <span
-                    className="minus"
+                    // className="minus"
                     onClick={() =>
                       toggleCartItemQty(currentProduct._id, "minus")
                     }
@@ -63,7 +63,7 @@ export default function Cart() {
                   </span>
                   <span className="num">{currentProduct.quantity}</span>
                   <span
-                    className="plus"
+                    // className="plus"
                     onClick={() =>
                       toggleCartItemQty(currentProduct._id, "plus")
                     }
