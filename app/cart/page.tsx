@@ -5,6 +5,8 @@ import { CartContext } from "../context/CartContext";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { TiDeleteOutline } from "react-icons/ti";
+import { div } from "framer-motion/client";
+import { emptyCart } from "@/public";
 
 export default function Cart() {
   const {
@@ -19,7 +21,7 @@ export default function Cart() {
   return (
     <div className="mx-[5%] my-[1%] rounded-xl bg-gray-300 p-[1%]">
       <div className="text-2xl text-center">
-        <span>Twoje zamówienie {totalQuantity} sztuk</span>{" "}
+        <span>Twoje zamówienie {totalQuantity} szt.</span>{" "}
         {cartItems.length > 0 && (
           <span>
             <p>Total Price</p>
@@ -27,7 +29,10 @@ export default function Cart() {
           </span>
         )}
       </div>
-
+        {
+          cartItems.length === 0 && 
+          <Image src={emptyCart} alt="empty cart" className="mx-auto"/>
+        }
       <div className="product-container bg-gray-400 rounded-xl">
         {cartItems.map((currentProduct: any) => (
           <div className="product" key={currentProduct._id}>

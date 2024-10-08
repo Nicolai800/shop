@@ -7,4 +7,5 @@ import thirdSliderImage from "./thirdSliderImage.jpeg"
 import fourthSliderImage from "./fourthSliderImage.jpeg"
 import facebookLogo from "./logo/facebookLogo.svg"
 import instagramLogo from "./logo/instagramLogo.svg"
-export { headerImg, secondHeaderImg, artKissLogo, firstSliderImage, secondSliderImage, thirdSliderImage, fourthSliderImage, facebookLogo, instagramLogo }
+import emptyCart from "./emptyCart.png"
+export { headerImg, secondHeaderImg, artKissLogo, firstSliderImage, secondSliderImage, thirdSliderImage, fourthSliderImage, facebookLogo, instagramLogo, emptyCart }
