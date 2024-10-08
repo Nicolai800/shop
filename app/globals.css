@@ -79,7 +79,7 @@ body {
 }
 
 .product-container {
-  @apply mt-[15px] overflow-auto max-h-[70vh] px-[20px] py-[10px];
+  @apply mt-[15px] overflow-auto max-h-[70vh] px-[20px] py-[10px] max-w-[700px];
 }
 
 .empty-cart {
@@ -97,7 +97,7 @@ body {
 }
 
 .product {
-  @apply flex gap-[15px] p-[20px];
+  @apply flex gap-[15px] p-[20px] border rounded-xl bg-gray-300;
 }
 
 .product .cart-product-image {

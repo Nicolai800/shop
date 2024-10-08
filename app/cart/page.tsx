@@ -7,6 +7,7 @@ import Image from "next/image";
 import { TiDeleteOutline } from "react-icons/ti";
 import { div } from "framer-motion/client";
 import { emptyCart } from "@/public";
+import Link from "next/link";
 
 export default function Cart() {
   const {
@@ -19,7 +20,7 @@ export default function Cart() {
     onRemove,
   }: any = useContext(CartContext);
   return (
-    <div className="mx-[5%] my-[1%] rounded-xl bg-gray-300 p-[1%]">
+    <div className="mx-[5%] my-[2%] rounded-xl bg-gray-300 p-[2%]">
       <div className="text-2xl text-center">
         <span>Twoje zamówienie {totalQuantity} szt.</span>{" "}
         {cartItems.length > 0 && (
@@ -29,10 +30,14 @@ export default function Cart() {
           </span>
         )}
       </div>
-        {
-          cartItems.length === 0 && 
-          <Image src={emptyCart} alt="empty cart" className="mx-auto"/>
-        }
+      {cartItems.length === 0 && (
+        <div className=" flex flex-col items-center">
+          <Image src={emptyCart} alt="empty cart" />
+          <Link href="/">
+            <button className="border-2 border-black p-3">Wróć do sklepu</button>
+          </Link>
+        </div>
+      )}
       <div className="product-container bg-gray-400 rounded-xl">
         {cartItems.map((currentProduct: any) => (
           <div className="product" key={currentProduct._id}>
