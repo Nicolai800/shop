@@ -97,7 +97,7 @@ body {
 }
 
 .product {
-  @apply flex gap-[15px] p-[20px] border rounded-xl bg-gray-300;
+  @apply flex flex-col gap-[4%] p-[3%]  rounded-xl bg-gray-300 mb-[2%] md:flex-row;
 }
 
 .product .cart-product-image {
@@ -147,13 +147,6 @@ body {
   color: rgb(49, 168, 49);
 }
 
-.remove-item {
-  font-size: 24px;
-  color: #f02d34;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-}
 
 .cart-bottom {
   position: absolute;

@@ -50,10 +50,10 @@ export default function Cart() {
               className="object-cover rounded-xl"
             />
             <div className="item-desc">
-              <div className="flex top flex-col border">
+              <div className="flex flex-col">
                 <button
                   type="button"
-                  className="remove-itm"
+                  className="text-2xl text-gray-700 cursor-pointer w-6 ml-auto"
                   onClick={() => onRemove(currentProduct)}
                 >
                   <TiDeleteOutline />
