@@ -56,7 +56,7 @@ function Navbar() {
           <Link href="/about" className="hover:text-gray-300">
             O nas
           </Link>
-          <Link href="/product_categories" className="hover:text-gray-300">
+          <Link href="/categories" className="hover:text-gray-300">
             Kategorie
           </Link>
           <Link href="/contacts" className="hover:text-gray-300">
@@ -80,7 +80,7 @@ function Navbar() {
           O nas
         </Link>
         <Link
-          href="/product_categories"
+          href="/categories"
           className="block px-4 py-2 hover:bg-slate-600"
         >
           Kategorie
